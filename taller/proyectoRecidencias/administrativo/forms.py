@@ -108,7 +108,7 @@ class DepartamentoEdificioForm(ModelForm):
         return valor
     # Número de cuartos no puede ser 0, ni mayor a 7.
     def clean_numCuartos(self):
-        valor = self.cleaned_data['nuMCuartos']
+        valor = self.cleaned_data['numCuartos']
         if (valor) == 0 or (valor) > 7:
             raise forms.ValidationError("Ingrese un numero de cuartos valido")
         return valor
